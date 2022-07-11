@@ -4,8 +4,10 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { createNewVehicle } from '../../services/API';
 import style from './style.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function New() {
+  const navigate = useNavigate();
 
   const schema = yup.object({
     name: yup.string().max(50, 'Limite de 50 caracteres').required('É necessário que o campo de nome seja preenchido'),
@@ -32,11 +34,11 @@ export default function New() {
       favorite: 0
     }
     await createNewVehicle(structure);
-    window.location.href = '/';
+    navigate('/');
   };
 
   const backToHome = () => {
-    window.location.href = '/';
+    navigate('/');
   };
 
 
