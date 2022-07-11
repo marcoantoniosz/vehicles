@@ -1,0 +1,39 @@
+@import '../../styles/break-point.sass'
+
+@include desktop
+  .form
+    input
+      width: 30vw !important
+  .buttons
+    width: 30vw !important
+  .button
+    width: 10vw !important
+  
+.form
+  width: 100vw
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  font-size: 1.5rem
+
+  input
+    width: 70vw
+    height: 6vh
+    border-radius: 30px
+    background-color: white
+    text-align: center
+
+.buttons
+  width: 70vw
+  display: flex
+  justify-content: space-between
+  
+
+.button
+  width: 30vw
+  height: 6vh
+  border-radius: 30px
+  background-color: #73D9C6 !important
+  cursor: pointer

@@ -1,0 +1,23 @@
+@media screen and (min-width: 1025px) {
+  .addButton button {
+    width: 30vw !important;
+  }
+}
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addButton button {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  margin-right: 30px;
+  height: 55px;
+  width: 85vw;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  background-color: #73D9C6;
+}
+
+/*# sourceMappingURL=style.module.css.map */
