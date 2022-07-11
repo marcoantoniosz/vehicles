@@ -6,8 +6,12 @@ import SearchBar from '../../components/SearchBar/index.js';
 import AppContext  from '../../context/AppContext.js';
 import AddButton from '../../components/AddButton/index.js';
 import style from './style.module.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+
+  const navigate = useNavigate();
+
   const { data, setData } = useContext(AppContext);
 
   const fetchAllData = useCallback(async () => {
@@ -28,7 +32,7 @@ export default function Home() {
 
   const editBtn = async ( { target } ) => {
     const id = target.parentElement.parentElement.id;
-    window.location.href = `/edit/${id}`;
+    navigate(`/edit/${id}`);
   }
 
   const favoriteBtn = async ( { target } ) => {
