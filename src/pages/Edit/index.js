@@ -6,8 +6,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { updateVehicle } from '../../services/API';
 import style from './style.module.css';
+const { useNavigate } = require('react-router-dom');
 
 export default function Edit() {
+
+  const navigate = useNavigate();
 
   const { id } = useParams();
   const [vehicle, setVehicle] = useState([]);
@@ -43,11 +46,11 @@ export default function Edit() {
       favorite: vehicle[0].favorited,
     }
     await updateVehicle(structure, id);
-    window.location.href = '/';
+    navigate('/');
   };
 
   const backToHome = () => {
-    window.location.href = '/';
+    navigate('/');
   };
 
 
