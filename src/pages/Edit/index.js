@@ -30,7 +30,7 @@ export default function Edit() {
     price: yup.number().required('É necessário que o campo de preço seja preenchido'),
   }).required();
 
-  const { register, handleSubmit } = useForm({
+  const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(schema)
   });
 
@@ -80,6 +80,7 @@ export default function Edit() {
           <div>
             <h6>Placa:</h6>
             <input {...register("plate", { required: true, minLength:7, maxLength: 7 })} />
+            {errors.plate ? <p className={ style.error }>{errors.plate.message}</p> : null}
           </div>
           <div>
             <h6>Descrição:</h6>
