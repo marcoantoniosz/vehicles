@@ -1,27 +1,25 @@
-$tablet-size: 481px
-$laptop-size: 769px
-$desktop-size: 1025px
-$desktop-large-size: 1201px
+$tablet-size: 768px
+$desktop-size: 1024px
+$mobile-m-size: 375px
+$mobile-l-size: 425px
 
 @mixin tablet 
   @media screen and (min-width: #{$tablet-size}) 
     @content
-  
-
-
-@mixin laptop
-  @media screen and (min-width: #{$laptop-size}) 
-    @content
-  
-
 
 @mixin desktop 
   @media screen and (min-width: #{$desktop-size})
     @content
+
+@mixin mobileM
+  @media screen and (min-width: #{$mobile-m-size})
+    @content
+
+@mixin mobileL
+  @media screen and (min-width: #{$mobile-l-size})
+    @content
+  
+  
   
 
-
-@mixin desktop-large
-  @media screen and (min-width: #{$desktop-large-size})
-    @content
 

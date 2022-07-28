@@ -1,33 +1,70 @@
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 375px) {
+  .form {
+    width: 100%;
+    font-size: 30px;
+  }
   .form select {
-    width: 30vw !important;
+    width: 300px !important;
+    height: 35px !important;
   }
   .form input {
-    width: 30vw !important;
-  }
-  .price {
-    justify-content: space-between !important;
-    width: 30vw !important;
-  }
-  .price input {
-    width: 10vw !important;
+    width: 120px !important;
+    height: 35px !important;
   }
   .submitBtn {
-    width: 30vw !important;
+    width: 200px !important;
+    height: 35px !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form {
+    max-width: 700px;
+  }
+  .form select {
+    width: 500px !important;
+    height: 40px !important;
+  }
+  .form input {
+    width: 200px !important;
+    height: 40px !important;
+  }
+  .submitBtn {
+    width: 200px !important;
+    height: 40px !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .form select {
+    width: 350px !important;
+  }
+  .form input {
+    width: 350px !important;
+  }
+  .price {
+    justify-content: space-around !important;
+    width: 350px !important;
+  }
+  .price input {
+    width: 150px !important;
+  }
+  .submitBtn {
+    width: 200px !important;
   }
 }
 .form {
-  width: 90vw;
-  height: 70vh;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 .form select {
-  width: 70vw;
-  height: 5vh;
+  width: 250px;
+  height: 30px;
   border-radius: 30px;
   background-color: white;
   text-align: center;
@@ -45,16 +82,16 @@
   text-align: center;
 }
 .price input {
-  width: 30vw;
-  height: 5vh;
+  width: 100px;
+  height: 30px;
   border-radius: 30px;
   background-color: white;
   text-align: center;
 }
 
 .submitBtn {
-  width: 30vw;
-  height: 5vh;
+  width: 150px;
+  height: 30px;
   border-radius: 30px;
   background-color: #73D9C6;
   cursor: pointer;

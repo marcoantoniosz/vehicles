@@ -1,9 +1,17 @@
 @import '../../styles/break-point.sass'
 
 
+@include mobileM
+  .input
+    width: 300px !important
+
+@include tablet
+  .input
+    width: 650px !important
+
 @include desktop
   .input
-    width: 50vw !important
+    width: 800px !important
   
 
 .nav
@@ -11,21 +19,20 @@
   justify-content: center
   flex-direction: row
   align-content: center
-  margin-top: 5rem
-  width: 100vw
+  margin-top: 50px
+  width: 100%
 
   button
     display: none
 
   .input
-    margin-top: 0.5rem
     height: 55px
-    width: 80vw
+    width: 250px
     border: none
     border-radius: 30px
     font-family: "FontAwesome", "Poppins", sans-serif
-    font-size: 1.3rem
-    padding: 1.5rem
+    font-size: 16px
+    padding: 20px
     background-color: #C1E9E3
   
   .searchi
